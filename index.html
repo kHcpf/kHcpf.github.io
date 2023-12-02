@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AAAAAAAAAAAAAAAA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            background-color: rgba(84, 55, 167, 0.973);
+            height: 100vh;
+            overflow: auto;
+            font-family: italic;
+            flex-direction: column;
+            position: center;
+        }
+
+        .slideshow-container {
+            max-width: 80%;
+            position: center;
+            margin: 0;
+
+        }
+
+        .mySlides {
+            display: flex;
+            width: 100%;
+            animation: fade 2.5s linear infinite;
+            position: center;
+
+        }
+
+        img {
+            width: 70%;
+            height: auto;
+            position: center;
+
+        }
+
+        p {
+            font-family: italic;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            margin-top: 20px;
+            display: block;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            75% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes animateHeart {
+            0% {
+                opacity: 0;
+                transform: translateY(0) rotate(45deg);
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-200px) rotate(45deg);
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            body {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                background-color: rgba(84, 55, 167, 0.973);
+                height: 100vh;
+                overflow: auto;
+                font-family: italic;
+                flex-direction: column;
+                position: center;
+            }
+
+            .slideshow-container {
+                max-width: 80%;
+                position: center;
+                margin: 0;
+                position: center;
+            }
+
+            .mySlides {
+                display: flex;
+                width: 100%;
+                animation: fade 2.5s linear infinite;
+                position: center;
+            }
+
+            img {
+                width: 70%;
+                height: auto;
+                position: center;
+
+            }
+
+
+            p {
+                font-size: 16px;
+                margin-top: 10px;
+            }
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            75% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes animateHeart {
+            0% {
+                opacity: 0;
+                transform: translateY(0);
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-200px);
+            }
+        }
+
+        .heart-img {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            /* Altere esta cor para a cor desejada */
+            transform: rotate(45deg);
+            animation: animateHeart 1s linear infinite;
+            border-radius: 50%;
+            opacity: 0;
+        }
+        
+        .message {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px;
+      background-color: rgb(255, 255, 255);
+      font-family:italic;
+      font-size:25px;
+      color:rgb(0, 0, 0);
+      text-align:center;
+      border-radius: 5px;
+    }
+
+
+    </style>
+</head>
+
+<body
+    background="https://static.vecteezy.com/ti/vetor-gratis/p2/2810014-light-purple-vector-background-with-bubbles-glitter-abstract-illustration-with-colorful-drops-pattern-for-wallpapers-curtains-vetor.jpg">
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src='https://i.postimg.cc/Wp5QgMBv/image.jpg' alt='image1' />
+        </div>
+        <div class="mySlides fade">
+            <img src='https://i.postimg.cc/xT01TyKV/image.jpg' alt='image2' />
+        </div>
+        <div class="mySlides fade">
+            <img src='https://i.postimg.cc/L6BvjRYZ/image.jpg' alt='image3' />
+        </div>
+        <div class="mySlides fade">
+            <img src='https://i.postimg.cc/jdfx8wHv/image.jpg' alt='image4' />
+        </div>
+
+        <div class="message"></div>
+
+
+    </div>
+    <p>Oi, amor! Só queria te dizer o quanto você é especial pra mim. Seu jeito único de enxergar o mundo ilumina meus
+        dias e aquece meu coração.<br>
+        Com você, cada momento é uma aventura incrível.
+        Sua companhia é o melhor presente que eu poderia ter. <br>
+        Te adoro demais, do jeitinho que você é, e mal posso esperar
+        por mais milhares de momentos juntos.
+        <br> Você é a pessoa mais incrível que eu conheço, e eu sou muito sortudo por ter
+        você ao meu lado. ❤️
+    </p>
+    <p>EU TE AMO SUA LINDA</p>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2500); // Altera a imagem a cada 2,5 segundos (2500 milissegundos)
+        }
+    </script>
+
+    <button onclick="showHearts()">aperte aq se vc me ama</button>
+    <div class="heart-container"></div>
+
+    <script>
+        function showHearts() {
+            const message = document.querySelector('.message');
+      
+      // Mensagem a ser exibida
+      const suaMensagem = "saiba q eu te amo muito mais"; // Altere a mensagem aqui
+
+            const heartContainer = document.querySelector('.heart-container');
+            for (let i = 0; i < 10; i++) {
+                const heart = document.createElement('img');
+                heart.classList.add('heart-img');
+                heart.src = 'https://icons.iconarchive.com/icons/designbolts/free-valentine-heart/72/Heart-icon.png'; // Coloque o link da imagem do coração aqui
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = Math.random() * 2 + 1 + 's';
+                heart.style.animationDelay = Math.random() * 2 + 's';
+                heartContainer.appendChild(heart);
+            }
+
+            
+            message.textContent = suaMensagem; // Define a mensagem
+      message.style.display = 'block';
+      setTimeout(() => {
+        heartContainer.innerHTML = '';
+        message.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+
+</body>
+
+</html>
